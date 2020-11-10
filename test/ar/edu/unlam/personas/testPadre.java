@@ -9,22 +9,24 @@ import java.util.HashSet;
 
 import org.junit.Test;
 
-public class testAlumno {
+public class testPadre {
 
 	@Test
-	public void queSePuedaCrearAlumno() {
-		Alumno alumno = new Alumno(40950675, "Alejandro");
+	public void queSePuedaCrearPadre() {
+		Alumno alumnoHijo = new Alumno(40950675, "Alejandro");
+		Padre padre = new Padre(12345678, "Jose", alumnoHijo);
 		
-		String nombre = "Alejandro";
-		Integer dni = 40950675;
+		String nombre = "Jose";
+		Integer dni = 12345678;
 		
-		assertEquals(nombre, alumno.getNombre());
-		assertEquals(dni, alumno.getDni());
+		assertEquals(nombre, padre.getNombre());
+		assertEquals(dni, padre.getDni());
 	}
 
 	@Test
-	public void queSePuedaConsultarPromedioFinal() {
+	public void queSePuedaConsultarPromedioFinalDelHijo() {
 		Alumno alumno = new Alumno(40950675, "Alejandro");
+		Padre padre = new Padre(12345678, "Jose", alumno);
 		Materia matematicas = new Materia(1, "Matematicas");
 		Materia sociales = new Materia(2, "Sociales");
 		Materia historia = new Materia(3, "Historia");
@@ -38,15 +40,16 @@ public class testAlumno {
 		notasFinales.add(notaFinalHistoria);
 		alumno.setNotasFinales(notasFinales);
 		
-		Double valorObtenido = alumno.consultarPromedioFinal();
+		Double valorObtenido = padre.consultarPromedioFinal();
 		Double valorEsperado = 7.0;
 		
 		assertEquals(valorEsperado, valorObtenido);
 	}
 	
 	@Test
-	public void queSePuedaConsultarPromedioDeXTrimestre() {
+	public void queSePuedaConsultarPromedioDeXTrimestreDelHijo() {
 		Alumno alumno = new Alumno(40950675, "Alejandro");
+		Padre padre = new Padre(12345678, "Jose", alumno);
 		Materia matematicas = new Materia(1, "Matematicas");
 		Materia sociales = new Materia(2, "Sociales");
 		Materia historia = new Materia(3, "Historia");
@@ -60,15 +63,16 @@ public class testAlumno {
 		notas1erTrimestre.add(nota1erTHistoria);
 		alumno.setPrimerTrimestre(notas1erTrimestre);
 		
-		Double valorObtenido = alumno.consultarPromedioFinalDeXTrimestre(1);
+		Double valorObtenido = padre.consultarPromedioFinalDeXTrimestre(1);
 		Double valorEsperado = 7.0;
 	
 		assertEquals(valorEsperado, valorObtenido);
 	}
 	
 	@Test
-	public void queSePuedaObtenerReportePorTrimestre() {
+	public void queSePuedaObtenerReportePorTrimestreDelHijo() {
 		Alumno alumno = new Alumno(40950675, "Alejandro");
+		Padre padre = new Padre(12345678, "Jose", alumno);
 		Materia matematicas = new Materia(1, "Matematicas");
 		Materia sociales = new Materia(2, "Sociales");
 		Materia historia = new Materia(3, "Historia");
@@ -102,7 +106,7 @@ public class testAlumno {
 		notas3erTrimestre.add(nota3erTHistoria);
 		alumno.setTercerTrimestre(notas3erTrimestre);
 		
-		String reporte = alumno.obtenerReporteDeNotasPorTrimestre();
+		String reporte = padre.obtenerReporteDeNotasPorTrimestre();
 		
 		String valorEsperado = 
 				"ar.edu.unlam.escuela.Materia@20= 7\r\n" + 
@@ -127,6 +131,7 @@ public class testAlumno {
 	@Test
 	public void queSePuedaObtenerReporteDeNotasFinales() {
 		Alumno alumno = new Alumno(40950675, "Alejandro");
+		Padre padre = new Padre(12345678, "Jose", alumno);
 		Materia matematicas = new Materia(1, "Matematicas");
 		Materia sociales = new Materia(2, "Sociales");
 		Materia historia = new Materia(3, "Historia");
@@ -140,7 +145,7 @@ public class testAlumno {
 		notasFinales.add(notaHistoria);
 		alumno.setNotasFinales(notasFinales);
 		
-		String reporte = alumno.obtenerReporteDeNotasFinales();
+		String reporte = padre.obtenerReporteDeNotasFinales();
 		
 		String valorEsperado = 
 				"ar.edu.unlam.escuela.Materia@20= 7\r\n" + 
@@ -152,3 +157,4 @@ public class testAlumno {
 		// DA ERROR AUNQUE LOS STRINGS SEAN COMPLETAMENTE IGUALES
 	}
 }
+

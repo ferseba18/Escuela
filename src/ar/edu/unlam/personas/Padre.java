@@ -2,9 +2,9 @@ package ar.edu.unlam.personas;
 
 import ar.edu.unlam.interfaces.metodosAlumno;
 
-								 //Implementa mismos metodos que alumno ya que los dos 
-								 //en el diseno de la clase ambos tienen las mismas funciones de solo
-								 //Visualizar y no modificar NADA
+ //Implementa mismos metodos que alumno ya que los dos 
+ //en el diseno de la clase ambos tienen las mismas funciones de solo
+ //Visualizar y no modificar NADA
 public class Padre extends Persona implements metodosAlumno{
 	private Alumno hijo;
 	
