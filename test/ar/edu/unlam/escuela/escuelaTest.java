@@ -11,16 +11,15 @@ import ar.edu.unlam.personas.Profesor;
 public class escuelaTest {
 
 	@Test
-	public void test() {
-		Materia m=new Materia(12, "Lengua");
-		Profesor p=new Profesor(12345678, "Profe");
-		Alumno a=new Alumno(43445028,"Esteban");
-		Notas n=new Notas(m, 7);
+	public void testQueSeCargueLaNotaEnElTrismestreQueCorresponde() {
+		Materia materia =new Materia(12, "Lengua");
+		Profesor profesor =new Profesor(12345678, "Profe");
+		Alumno alumno =new Alumno(43445028,"Esteban");
+		Notas nota =new Notas(materia, 7);
 		
-		assertTrue(p.cargarNotaAAlumno(a, 1, n));
-		assertFalse(p.cargarNotaAAlumno(a, 2, n));
-		assertFalse(p.cargarNotaAAlumno(a, 3, n));
-		//Queria chequear que no se cargue la misma nota en distintos trimestres
+		assertTrue(profesor.cargarNotaAAlumno(alumno, 1, nota));
+		assertFalse(profesor.cargarNotaAAlumno(alumno, 2, nota));
+		assertFalse(profesor.cargarNotaAAlumno(alumno, 3, nota));
 	}
 	
 	@Test
@@ -121,8 +120,7 @@ public class escuelaTest {
 	public void testQueBuscaProfePorDNI() {
 		Director d= new Director(15205201,"Pedro Pascuas");
 		Escuela e= new Escuela("PeritoMoreno", d);
-		Materia m=new Materia(12, "Lengua");
-		
+	
 		Profesor p=new Profesor(12345678, "Profe");
 		e.agregarProfe(p);
 

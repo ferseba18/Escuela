@@ -104,24 +104,23 @@ public class testAlumno {
 		
 		String reporte = alumno.obtenerReporteDeNotasPorTrimestre();
 		
-		String valorEsperado = 
-				"ar.edu.unlam.escuela.Materia@20= 7\r\n" + 
-				"ar.edu.unlam.escuela.Materia@21= 7\r\n" + 
-				"ar.edu.unlam.escuela.Materia@22= 7\r\n" + 
-				"\r\n" + 
-				" Segundo Trimestre: \r\n" + 
-				"ar.edu.unlam.escuela.Materia@20=8\r\n" + 
-				"ar.edu.unlam.escuela.Materia@21=8\r\n" + 
-				"ar.edu.unlam.escuela.Materia@22=6\r\n" + 
-				"\r\n" + 
-				" Tercer Trimestre: \r\n" + 
-				"ar.edu.unlam.escuela.Materia@20=9\r\n" + 
-				"ar.edu.unlam.escuela.Materia@21=5\r\n" + 
-				"ar.edu.unlam.escuela.Materia@22=10\r\n" + 
+		String valorEsperado = "Primer Trimestre: \n"+
+				"Matematicas = 7\n"+
+				"Sociales = 7\n"+
+				"Historia = 7\n"+
+				"\n"+
+				"Segundo Trimestre: \n"+
+				"Matematicas = 8\n"+
+				"Sociales = 8\n"+
+				"Historia = 6\n"+
+				"\n"+
+				"Tercer Trimestre: \n"+
+				"Matematicas = 9\n"+
+				"Sociales = 5\n"+
+				"Historia = 10\n"+
 				"";
-	
-		//assertEquals(valorEsperado,reporte);
-		// DA ERROR AUNQUE LOS STRINGS SEAN COMPLETAMENTE IGUALES
+		assertEquals(valorEsperado, reporte);
+
 	}
 	
 	@Test
@@ -142,13 +141,10 @@ public class testAlumno {
 		
 		String reporte = alumno.obtenerReporteDeNotasFinales();
 		
-		String valorEsperado = 
-				"ar.edu.unlam.escuela.Materia@20= 7\r\n" + 
-				"ar.edu.unlam.escuela.Materia@21= 7\r\n" + 
-				"ar.edu.unlam.escuela.Materia@22= 8\r\n" + 
-				"";
+		String valorEsperado = "Matematicas = 7\n"+
+				"Sociales = 7\n"+
+				"Historia = 8\n";
 	
-		//assertEquals(valorEsperado,reporte);
-		// DA ERROR AUNQUE LOS STRINGS SEAN COMPLETAMENTE IGUALES
+		assertEquals(valorEsperado, reporte);
 	}
 }
