@@ -175,14 +175,11 @@ public class Curso {
 
 	public Profesor bucarProfeEnCursoXDni(Integer dni) {
 		HashSet<Profesor> lista=getListaDeProfesores();
-		
 		for (Profesor p : lista) {
 			if (p.getDni().equals(dni)) {
 				return p;
+			}	
 			}
+		return null;
 		}
-		
-		return null;	
 	}
-
-}
