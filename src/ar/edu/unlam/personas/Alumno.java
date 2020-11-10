@@ -54,7 +54,6 @@ public class Alumno extends Persona implements metodosAlumno {
 	
 	@Override
 	public Double consultarPromedioFinal() {
-		// TODO Auto-generated method stub
 		double promedio=0.0;
 		
 		promedio=sumatoria(this.notasFinales)/this.notasFinales.size();
@@ -78,7 +77,6 @@ public class Alumno extends Persona implements metodosAlumno {
 	
 	@Override
 	public Double consultarPromedioFinalDeXTrimestre(Integer trimestre) {
-		// TODO Auto-generated method stub
 		Double promedio=0.0;
 		
 		switch (trimestre) {
@@ -112,7 +110,7 @@ public class Alumno extends Persona implements metodosAlumno {
 	
 	
 	@Override
-	public String obtenerReporteDeNotas() {
+	public String obtenerReporteDeNotasPorTrimestre() {
 		String reporte="";
 		
 		for (Notas n : this.primerTrimestre) {
@@ -134,7 +132,7 @@ public class Alumno extends Persona implements metodosAlumno {
 	}
 
 	@Override
-	public String obtenerReporteDeNotasDeTodosTrimestre() {
+	public String obtenerReporteDeNotasFinales() {
 		// TODO Auto-generated method stub
 		String reporte="";
 		
@@ -144,6 +142,8 @@ public class Alumno extends Persona implements metodosAlumno {
 		
 		return reporte;
 	}
+	
+	
 	
 	public Boolean buscarNotaEnOtrosTrimestres(Notas nota) {
 		Integer contador=0;

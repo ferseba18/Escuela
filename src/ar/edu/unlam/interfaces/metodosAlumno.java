@@ -4,7 +4,7 @@ public interface metodosAlumno {
 
 	public Double consultarPromedioFinal();
 	public Double consultarPromedioFinalDeXTrimestre(Integer trimestre);
-	public String obtenerReporteDeNotas();
-	public String obtenerReporteDeNotasDeTodosTrimestre();
+	public String obtenerReporteDeNotasPorTrimestre();
+	public String obtenerReporteDeNotasFinales();
 	
 }

@@ -25,13 +25,13 @@ public class Padre extends Persona implements metodosAlumno{
 	}
 
 	@Override
-	public String obtenerReporteDeNotas() {
-		return this.hijo.obtenerReporteDeNotas();
+	public String obtenerReporteDeNotasPorTrimestre() {
+		return this.hijo.obtenerReporteDeNotasPorTrimestre();
 	}
 
 	@Override
-	public String obtenerReporteDeNotasDeTodosTrimestre() {
-		return this.obtenerReporteDeNotasDeTodosTrimestre();
+	public String obtenerReporteDeNotasFinales() {
+		return this.obtenerReporteDeNotasFinales();
 	}
 
 
