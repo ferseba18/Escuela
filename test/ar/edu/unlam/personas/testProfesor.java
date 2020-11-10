@@ -4,10 +4,6 @@ import ar.edu.unlam.escuela.Materia;
 import ar.edu.unlam.escuela.Notas;
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-
-import static org.junit.Assert.*;
 
 import org.junit.Test;
 
