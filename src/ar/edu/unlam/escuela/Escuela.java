@@ -102,7 +102,7 @@ public class Escuela {
 	public Alumno buscarAlumno(Alumno alumno) {
 		for(Alumno a: this.alumnos) {
 			
-			if(a.getDni().equals(alumno)){
+			if(a.equals(alumno)){
 				
 				return a;
 			}
@@ -212,7 +212,7 @@ public class Escuela {
 		Boolean check=false;
 		
 		if (profe != null) {
-			check=this.cursos.remove(buscarCurso(dni));
+			check=this.profesores.remove(buscarProfesor(dni));
 		}
 		
 		return check;
