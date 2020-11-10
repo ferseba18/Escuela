@@ -111,21 +111,21 @@ public class Alumno extends Persona implements metodosAlumno {
 	
 	@Override
 	public String obtenerReporteDeNotasPorTrimestre() {
-		String reporte="";
 		
+		String reporte ="Primer Trimestre: \n";
 		for (Notas n : this.primerTrimestre) {
-			reporte+= (n.getMateria() + "= " + n.getResultado()+ "\n");
+			reporte+= (n.getMateria().getNombre() + " = " + n.getResultado()+ "\n");
 		}
 		
-		reporte+="\n Segundo Trimestre: \n";
+		reporte+="\nSegundo Trimestre: \n";
 		
 		for (Notas n : this.segundoTrimestre) {
-			reporte+= (n.getMateria() + "=" + n.getResultado()+ "\n");
+			reporte+= (n.getMateria().getNombre() + " = " + n.getResultado()+ "\n");
 		}
 		
-		reporte+="\n Tercer Trimestre: \n";
+		reporte+="\nTercer Trimestre: \n";
 		for (Notas n : this.tercerTrimestre) {
-			reporte+= (n.getMateria() + "=" + n.getResultado()+ "\n");
+			reporte+= (n.getMateria().getNombre() + " = " + n.getResultado()+ "\n");
 		}
 		
 		return reporte;
@@ -137,7 +137,7 @@ public class Alumno extends Persona implements metodosAlumno {
 		String reporte="";
 		
 		for (Notas n : this.notasFinales) {
-			reporte+= (n.getMateria() + "= " + n.getResultado()+ "\n");
+			reporte+= (n.getMateria().getNombre() + " = " + n.getResultado()+ "\n");
 		}
 		
 		return reporte;

@@ -31,7 +31,7 @@ public class Padre extends Persona implements metodosAlumno{
 
 	@Override
 	public String obtenerReporteDeNotasFinales() {
-		return this.obtenerReporteDeNotasFinales();
+		return this.hijo.obtenerReporteDeNotasFinales();
 	}
 
 
