@@ -20,8 +20,8 @@ public class CursoTest {
 		Profesor p1=new Profesor(12314258, "Marcela");
 		Profesor p2=new Profesor(17812854, "Javier");
 		
-		Object VE = null;
-		Object VO= c.bucarProfeEnCursoXDni(47841891);
+		Object VE =p ;
+		Object VO= c.bucarProfeEnCursoXDni(12376521);
 		assertEquals(VE, VO);
 }
 	public void testQuebuscarProfeEnCurso() {
@@ -30,7 +30,7 @@ public class CursoTest {
 		Profesor p=new Profesor(12376521, "leandro");
 		Profesor p1=new Profesor(12314258, "Marcela");
 		Profesor p2=new Profesor(17812854, "Javier");
-		Object VE= null;
+		Object VE= p;
 		Object VO=c.buscarProfeEnCurso(p);
 		assertEquals(VE, VO);
 	}
@@ -40,7 +40,7 @@ public class CursoTest {
 		Materia m1=new Materia(12, "Geografia");
 		Materia m2=new Materia(11, "Historia");
 		Profesor p=new Profesor(12314258, "Marcela");
-        Materia VE=null;
+        Materia VE=m;
         Materia VO=c.buscarMateriaXId(m.getIdMateria());
         assertEquals(VE,VO);
 	}
@@ -50,8 +50,8 @@ public class CursoTest {
 		Materia m1=new Materia(12, "Geografia");
 		Materia m2=new Materia(11, "Historia");
 		Profesor p=new Profesor(12314258, "Marcela");
-		Materia VE=null;
-        Materia VO=c.buscarMateria(m); 
+		Materia VE=m1;
+        Materia VO=c.buscarMateria(m1); 
         assertEquals(VE,VO);
 	}
 	
@@ -71,8 +71,8 @@ public class CursoTest {
 		Materia m1=new Materia(12, "Geografia");
 		Materia m2=new Materia(11, "Historia");
 		Profesor p=new Profesor(12314258, "Marcela");
-		Boolean VE=true;		
-		Materia m3=new Materia(22,"Psicologia");
+	Boolean VE=true;		
+	Materia m3=new Materia(22,"Psicologia");
         Boolean VO=c.agregarMateria(m3); 
         assertEquals(VE,VO);
 	}
